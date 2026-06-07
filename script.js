@@ -86,3 +86,13 @@ window.addEventListener("mouseup", () => {
   else                    hsGoTo(hsCurrent);
   if (hsPlaying) hsTimer = setInterval(() => hsGoTo(hsCurrent + 1), 3500);
 });
+function toggleMenu() {
+  const nav = document.getElementById("navLinks");
+  const icon = document.getElementById("hamburgerIcon");
+  nav.classList.toggle("open");
+  if (nav.classList.contains("open")) {
+    icon.classList.replace("fa-bars", "fa-xmark");
+  } else {
+    icon.classList.replace("fa-xmark", "fa-bars");
+  }
+}
