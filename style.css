@@ -29,21 +29,27 @@ body{
 .nav-links{
     display: flex;
     gap: 22px;
+    margin-left: 60px;
+    margin-right: auto;
+    position: relative;
+    left: 60px;
+
 }
 .nav-links a{
-    margin: 0 12px;
     text-decoration: none;
     color: white;
     font-size: 14px;
-    margin: 0;
+    padding: 2px 0;
+
 }
 .nav-right{
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 40px;
+
 }
 .nav-right i{
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -56,8 +62,9 @@ body{
     object-fit: contain;
 }
 .signin{
-    color: white;
+    color: rgb(49, 149, 192);
     text-decoration: none;
+    /* size: 15px; */
 }
 .btn-primary{
      background: #66ff66;
@@ -184,7 +191,7 @@ body{
 .floating {
      position: fixed;
      right: 20px;
-     top: 50%;
+     top: 70%;
      transform: translate(-50%);
      display: flex;
      flex-direction: column;
@@ -204,6 +211,7 @@ body{
     min-width: 130px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     transition: 0.3s ease;
+   border: 2px solid rgb(255, 255, 255);
 }
 .floating button:hover{
     transform: translatex(-5px);
@@ -403,19 +411,36 @@ body{
 .hs-group {
   min-width: 100%;
   display: flex;
-  gap: 12px;
+  gap: 42px;
+  align-items: center;
+}
+
+.hs-group img:first-child {
+  flex: 1;
+  height: 300px;
+}
+
+.hs-group img:nth-child(2) {
+  flex: 2;
+  height: 380px;
+}
+
+.hs-group img:last-child {
+  flex: 1;
+  height: 300px;
 }
 
 .hs-group img {
-  flex: 1;
+  /* flex: 1; */
   width: 0;
-  height: 380px;
+  /* height: 380px; */
   object-fit: cover;
-  border-radius: 16px 16px 0 0;
+  border-radius: 26px ;
   pointer-events: none;
   user-select: none;
   display: block;
-}
+} 
+
 .peragraph{
   padding-top: 120px;
   text-align: center;
@@ -477,7 +502,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+     border: 1px solid rgba(255, 255, 255, 0.12);
     transition: 0.3s ease;
 }
 
@@ -544,6 +569,8 @@ body{
   gap: 40px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
 .f-itemes{
@@ -555,9 +582,15 @@ body{
 
 .feat-icon {
   padding-top: 90px;
+  margin-bottom: 26px;
   font-size: 38px;
   color: #ffffff;
 }
+
+ /* .f-itemes i{
+   margin-bottom: 20px; 
+   gap: 24px;
+}  */
 
 .f-items h3 {
   font-size: 18px;
@@ -712,5 +745,121 @@ h1{
   }
   .hs-group img {
     height: 160px;
+  }
+}
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+@media (max-width: 900px) {
+  .hamburger { display: block; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #04292d;
+    padding: 20px 30px;
+    z-index: 1000;
+    gap: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .nav-links.open { display: flex; }
+
+  .nav-right { gap: 16px; }
+  .signin { display: none; }
+
+  .box {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+  .box-content1,
+  .box-content2,
+  .box-content3 {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    padding: 28px 24px;
+  }
+  .box h1 { font-size: 48px; }
+}
+
+@media (max-width: 600px) {
+  .announcement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  .floating {
+    right: 8px;
+    bottom: 16px;
+    top: auto;
+    transform: none;
+  }
+  .floating button {
+    min-width: unset;
+    padding: 10px 14px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .hero-slider { padding: 30px 16px 0; }
+  .hs-slide-content h1 { font-size: 22px; }
+  .hs-desc { font-size: 14px; }
+  .hs-btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hs-group { gap: 10px; }
+  .hs-group img:first-child,
+  .hs-group img:last-child { height: 130px; }
+  .hs-group img:nth-child(2) { height: 170px; }
+
+  .feature-sec {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .otto-card {
+    flex-direction: column;
+    padding: 32px 24px;
+    align-items: center;
+    text-align: center;
+  }
+  .otto-logo {
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+  }
+  .otto-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .otto-section { padding: 40px 16px 48px; }
+}
+
+@media (max-width: 1024px) {
+  .feature-sec {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px 32px;
   }
 }
