@@ -5,10 +5,11 @@
 }
 body{
     font-family: 'Inter' , sans-serif;
-    background: #062f33;
+    background: #062f33; 
     color: white;
     overflow-x:hidden;
 }
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -855,6 +856,59 @@ h1{
     flex-direction: column;
   }
   .otto-section { padding: 40px 16px 48px; }
+}
+
+video{
+  width:100%;
+  border-radius:10px;
+  align-items: center;
+}
+.video-section{
+  background: #062f33;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video-section video{
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  border:none;
+  outline:none;
+  border-radius: 0;
+  box-shadow: none;
+
+}
+.navbar-2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 25px 35px;
+  border-radius: 50px;
+  width: 90%;
+  margin: 70px auto;
+    background-color: rgba(0,0,0,0.25);
+  backdrop-filter: blur(5px);
+}
+.navbar-2 a{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.navbar-2 a:hover{
+  background: #f8f9faeb;
+  color: rgb(20, 5, 5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
 }
 
 @media (max-width: 1024px) {
